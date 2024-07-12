@@ -27,8 +27,8 @@ rsync -av --remove-source-files ../nibm/ root@192.168.125.130:/tmp/rsync_send
 
 # Send Files excluding some Files and Folders to Remote location
 
-rsync -av --exclude={'filemame1','Orfoldername1'} source/location root@192.168.destination.ip:/path/of/
-rsync -av --exclude={'new16','new17'} ../nibm root@192.168.125.130:/tmp/rsync_send
+rsync -av --exclude={'filemame1','Orfoldername1','.extension'} source/location root@192.168.destination.ip:/path/of/
+rsync -av --exclude={'new16','new17','.txt'} ../nibm root@192.168.125.130:/tmp/rsync_send
 
 
 
