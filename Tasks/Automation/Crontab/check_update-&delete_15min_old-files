@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Define the file path
+file="/backup/daily/Web/day-$(date +%d-%m-%M).tar.gz"
+
+log_file="/home/centos/Documents/check_log.txt"
+
+# Check if the file exists
+
+if [ -e "$file" ]; then
+    echo "$(date): File $file exists." >> "$log_file"
+    # Additional steps if the file exists
+else
+    echo "$(date): File $file does not exist." >> "$log_file"
+    # Additional steps if the file does not exist
+fi
+
+sleep 10
+
+delete_old() {
+    find "$file" -name "day-*.tar.gz" -mmin +15 -exec rm -f {} \;
+}
+
+
+# Delete files older than 15 minutes
+delete_old
+
+# Log the deletion process
+echo "$(date +%M) Backup Deleted " >> "$log_file"
+
+scp -r /home/centos/Documents/check_log.txt  root@192.168.125.129:/notification/check_bk_log.txt
