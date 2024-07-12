@@ -18,11 +18,17 @@ rsync -avn nibm/ root@192.168.125.130:/tmp/rsync_send
 
 ---------------------------------------------------------------------------
 
-# --remove-source-files use to Send files to the Backup location and remove those sent Files from Source Location 
+# --remove-source-files use to Send files to the Backup location and remove all those sent Files from Source Location 
 
+rsync -av --remove-source-files source/location root@192.168.destination.ip:/path/of/
+rsync -av --remove-source-files ../nibm/ root@192.168.125.130:/tmp/rsync_send
 
+---------------------------------------------------------------------------
 
+# Send Files excluding some Files and Folders to Remote location
 
+rsync -av --exclude={'filemame1','Orfoldername1'} source/location root@192.168.destination.ip:/path/of/
+rsync -av --exclude={'new16','new17'} ../nibm root@192.168.125.130:/tmp/rsync_send
 
 
 
