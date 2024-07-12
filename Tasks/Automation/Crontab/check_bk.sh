@@ -14,3 +14,5 @@ else
     echo "$(date): File $file does not exist." >> "$log_file"
     # Additional steps if the file does not exist
 fi
+
+scp -r /path/to/log/file.txt  root@192.168.125.129:/path/to/destination/file.txt
