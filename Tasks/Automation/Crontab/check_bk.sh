@@ -16,3 +16,7 @@ else
 fi
 
 scp -r /path/to/log/file.txt  root@192.168.125.129:/path/to/destination/file.txt
+
+
+# * * * * * /home/centos/Documents/notify.sh
+# add this to crontab -e on backup pc
