@@ -1,23 +1,9 @@
 #!/bin/bash
 
 # backup save location
-file="/backup/daily/Web/day-$(date +%d-%m-%M).tar.gz"
+
 backup_dir="/backup/daily/Web"
-
-
 log_file="/home/centos/Documents/check_log.txt"
-
-# Check file recieved
-
-if [ -e "$file" ]; then
-    echo "$(date): File $file exists." >> "$log_file"
-
-else
-    echo "$(date): File $file does not exist." >> "$log_file"
-
-fi
-
-sleep 10
 
 # check and delete old files
 delete_old() {
