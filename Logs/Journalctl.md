@@ -7,4 +7,11 @@
 Prompt all the logs
 
 ## journalctl -n 10 
-Prompt last -n [Minute] Logs
+Prompt last -n [Minute] Logs [10]
+
+## journalctl -p err
+prompt all -p [Type] Logs [err]
+
+## journalctl --since today
+prompt all --since [Start_date_or_Time] till Now Logs [today]
+
