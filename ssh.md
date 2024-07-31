@@ -6,3 +6,9 @@ $ ssh-keygen
 ```
 The `ssh-keygen` command is used to generate SSH key pairs for secure authentication.
 
+## ssh-copy-id
+```
+$ ssh-copy-id username@ip_address
+$ ssh-copy-id root@192.168.125.136
+```
+The `ssh-copy-id` command is used to copy the public key to a remote server, allowing passwordless authentication.
