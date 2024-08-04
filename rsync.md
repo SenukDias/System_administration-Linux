@@ -6,7 +6,7 @@
 
 # Archive Run (This command send files to destination and shows what files copied <b>This command will copy files</b>)
 
-rsync -av source/location <username>@192.168.destination.ip:/path/of/destination 
+rsync -av source/location username@192.168.destination.ip:/path/of/destination 
 
 rsync -av nibm/ root@192.168.125.130:/tmp/rsync_send
 
