@@ -7,8 +7,6 @@
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed 💻
 
-![Cronjob](https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)
-
 * * * * *  /usr/bin/echo $(df -h) >> /tmp/Backups/printDF-H-$(date "+\%h-\%d-\%H-\%M") 📂
 
 18 * * * * /usr/bin/mkdir /tmp/Backups/cronfold 📁

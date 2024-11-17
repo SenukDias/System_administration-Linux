@@ -29,5 +29,3 @@ rsync -av --remove-source-files ../nibm/ root@192.168.125.130:/tmp/rsync_send
 rsync -av --exclude={'filemame1','Orfoldername1','.extension'} source/location root@192.168.destination.ip:/path/of/
 
 rsync -av --exclude={'new16','new17','.txt'} ../nibm root@192.168.125.130:/tmp/rsync_send
-
-![Rsync](https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)
