@@ -49,3 +49,5 @@ To verify that the firewall is allowing SFTP traffic, use the following command:
 ```bash
 sudo firewall-cmd --list-all
 ```
+
+![SFTP](https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)
